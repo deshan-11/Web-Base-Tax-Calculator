@@ -1,46 +1,59 @@
  body {
-      background-color: #dce3ea;
-    }
-    .sidebar {
-      width: 230px;
-      height: 100vh;
-      background-color: #212529;
-      position: fixed;
-    }
-    .sidebar .nav-link {
-      color: #adb5bd;
-      margin-bottom: 10px;
-      transition: 0.3s;
-    }
-    .sidebar .nav-link.active,
-    .sidebar .nav-link:hover {
-      background-color: #0d6efd;
-      color: #fff;
-      border-radius: 6px;
-      padding-left: 15px;
-    }
-    .content {
-      margin-left: 240px;
-      padding: 40px;
-    }
-    .card {
-      border-radius: 12px;
-    }
-    footer {
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      width: calc(100% - 230px);
-    }
-    footer a {
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-   
+            background-color: #dce3ea;
+        }
+        .sidebar {
+            width: 230px;
+            height: 100vh;
+            background-color: #212529;
+            position: fixed;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .sidebar .nav-link {
+            color: #adb5bd;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+        .sidebar .nav-link.active,
+        .sidebar .nav-link:hover {
+            background-color: #0d6efd;
+            color: #fff;
+            border-radius: 6px;
+            padding-left: 15px;
+        }
+        .content {
+            margin-left: 240px;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        .card {
+            border-radius: 12px;
+        }
+        footer {
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
